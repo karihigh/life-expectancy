@@ -6,6 +6,7 @@ const mustacheExpress = require('mustache-express');
 
 let app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static('public'))
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname);
